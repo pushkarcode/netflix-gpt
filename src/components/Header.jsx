@@ -1,12 +1,48 @@
-import React from 'react'
-import logo from "../assets/logo.png"
+import React from "react";
+import logo from "../assets/logo.png";
+import { signOut } from "firebase/auth";
+import { auth } from "../utils/firebase";
+import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
+
 
 const Header = () => {
-  return (
-    <div className='absolute  w-full px-32 bg-gradient-to-b from-black py-2 z-10'>
-        <img className='w-[12vw] object-cover' src={logo} alt='golu'/>
-    </div>
-  )
-}
+  const nevigate = useNavigate();
+  const user = useSelector((store) => store.user);
 
-export default Header
+  const handleSignOut = () => {
+    signOut(auth)
+      .then(() => {
+        nevigate("/");
+      })
+      .catch((error) => {
+        // An error happened.
+        nevigate("/error");
+      });
+  };
+
+  return (
+    <div className="absolute  w-full px-32 bg-gradient-to-b from-black py-2 z-10 flex items-center justify-between">
+      <img className="w-[12vw] object-cover" src={logo} alt="golu" />
+
+      {user && (
+        <div className="flex  items-center gap-x-7">
+          <img
+            className="w-[3vw] object-cover rounded-sm block"
+            src={user?.photoURL}
+            alt="usericon"
+          />
+
+          <button
+            onClick={handleSignOut}
+            className="px-2 py-2 rounded-md bg-zinc-400 text-[1.2vw] text-zinc-700 font-medium transition-all ease-linear hover:bg-zinc-500 hover:text-zinc-800"
+          >
+            Sign Out
+          </button>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default Header;

@@ -15,6 +15,18 @@
 - Created Redux-store with userSlice
 - Implemented Sign out
 - Update Profile
+- BugFix: Signup user and displayname and profile update
+- BugFix: create protected routes
+- Unsubscribe to the onAuthStateChanged callback
+- Hardcodede data shift to contant files
+- Resgister for API call from tmdb
+- Created custom hook's
+- Create movieSlice
+- Update store with movie data
+- planing for MainContainer & SecandryContainer
+- Fetch data for trailer video
+- Update store with trailer video data
+- Embedded the youtube video
 
 # Features
 

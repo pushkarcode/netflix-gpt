@@ -27,6 +27,9 @@
 - Fetch data for trailer video
 - Update store with trailer video data
 - Embedded the youtube video
+- Build SecandrayContainer
+- Creating scrollable movie card
+- Creating a hook for each moviecart
 
 # Features
 

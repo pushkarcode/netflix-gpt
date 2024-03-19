@@ -11,12 +11,13 @@ const useNowPlayingMovies = async () => {
       API_OPTIONS
     );
     const raw = await data.json();
-    console.log(raw.results);
+    // console.log(raw.results);
     dispatch(addNowPlayingMovie(raw.results));
   };
   useEffect(() => {
     getNowPlayingMovies();
   }, []);
 };
+
 
 export default useNowPlayingMovies;

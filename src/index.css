@@ -7,4 +7,27 @@
     width:47px;
     overflow: hidden;
   } */
+
+  *::selection {
+    color: #413b3b;
+    background-color: #d6d6de;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+    background-color: rgb(124, 112, 112);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(37, 34, 34, 0.682);
+    border-radius: 15px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(30, 81, 182, 0.547);
+    border-radius: 15px;
+    transition: all ease;
+    
+  }
   

@@ -34,7 +34,9 @@
 - Created GPT page
 - Created GPT bar
 - (*) Multi language support
--   
+- Crearting Searching movie system
+- Adding lading gif
+- 
 
 # Features
 

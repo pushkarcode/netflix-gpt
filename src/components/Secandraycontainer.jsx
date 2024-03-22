@@ -4,7 +4,6 @@ import { useSelector } from 'react-redux'
 
 const Secandraycontainer = () => {
   const movies = useSelector(store => store.movies)
-  console.log(movies);
 
   return movies && (
    <div className='-mt-52   relative z-20'>

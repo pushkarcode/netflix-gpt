@@ -11,7 +11,6 @@ const useTopratedMovie = async () => {
       API_OPTIONS
     );
     const raw = await data.json();
-    // console.log(raw.results);
     dispatch(addTopratedMovie(raw.results));
   };
   useEffect(() => {

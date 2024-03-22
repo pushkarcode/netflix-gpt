@@ -56,12 +56,11 @@ const Login = () => {
             .catch((error) => {
               setErrorMessage(error.message);
             });
-          console.log(user);
         })
         .catch((error) => {
           const errorCode = error.code;
           const errorMessage = error.message;
-          console.log(errorCode + "-" + errorMessage);
+          setErrorMessage(errorCode + "-" + errorMessage);
         });
     } else {
       // ? sign In ----------------
@@ -86,7 +85,7 @@ const Login = () => {
     setisSignInForm(!isSignInForm);
   };
 
-  return (
+  return  (
     <div className="relative">
       <Header />
       <div className="absolute">

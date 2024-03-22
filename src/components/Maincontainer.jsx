@@ -6,17 +6,19 @@ import VideoBackground from "./VideoBackground";
 const Maincontainer = () => {
   const movie = useSelector((store) => store.movies?.nowPlayingMovies);
   if (!movie) return;
+   var n = Math.floor(Math.random()*20);
+  const mainMovie = movie[n];
 
-  const mainMovie = movie[0];
 
   const { original_title, overview, id } = mainMovie;
 
   return (
-    <div className="relative w-full overflow-x-hidden">
-      <VideoTitle title={original_title} overview={overview} />
-      <VideoBackground movieId={id} />
-
-    </div>
+    movie && (
+      <div className="relative w-full overflow-x-hidden">
+        <VideoTitle title={original_title} overview={overview} />
+        <VideoBackground movieId={id} />
+      </div>
+    )
   );
 };
 

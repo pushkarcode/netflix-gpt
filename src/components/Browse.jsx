@@ -8,19 +8,23 @@ import useUpcomingMovies from "../hooks/useUpcomingMovies";
 import useTopratedMovie from "../hooks/useTopratedMovie";
 import GptSearch from "./GptSearch";
 import { useSelector } from "react-redux";
+import Loader from "./Loader";
 
 const Browse = () => {
   // ! fetch data from tmdb api and update store
   const showGptSearch = useSelector((store) => store.gpt.showGptSearch);
+
   useNowPlayingMovies();
   usePopularMovies();
   useUpcomingMovies();
   useTopratedMovie();
 
-  return  (
-    <div className="w-screen h-screen overflow-x-hidden bg-slate-300">
+  const data = useSelector((store) => store.movies?.nowPlayingMovies);
+  
+  return data ? (
+    <div className="w-screen h-screen overflow-x-hidden bg-slate-500">
       <Header />
-      {showGptSearch ? ( 
+      {showGptSearch ? (
         <GptSearch />
       ) : (
         <>
@@ -28,9 +32,8 @@ const Browse = () => {
           <Secandraycontainer />
         </>
       )}
-     
     </div>
-  );
+  ) : (<Loader/>)
 };
 
 export default Browse;

@@ -30,6 +30,11 @@
 - Build SecandrayContainer
 - Creating scrollable movie card
 - Creating a hook for each moviecart
+- GPT integration for movie-recommendations 
+- Created GPT page
+- Created GPT bar
+- (*) Multi language support
+-   
 
 # Features
 

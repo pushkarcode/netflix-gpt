@@ -6,10 +6,10 @@ const VideoTitle = ({ title, overview }) => {
   return (
     <div className="w-full h-full px-12 pt-12 flex flex-col gap-y-4 absolute">
       <div className="w-[30%] mt-40 flex flex-col gap-y-5 backdrop-blur-sm">
-        <h1 className="font-medium text-5xl text-zinc-300 tracking-tight">
+        <h1 className="font-medium text-5xl text-zinc-800 tracking-tight">
           {title}
         </h1>
-        <p className="font-light text-lg text-zinc-300 tracking-wide leading-5">
+        <p className="font-medium text-lg text-zinc-800 tracking-wide leading-5">
           {overview}
         </p>
       </div>

@@ -1,7 +1,6 @@
 import React, { useRef, useState } from "react";
 import lang from "../utils/languageConstant";
 import { useDispatch, useSelector } from "react-redux";
-import openai from "../utils/openai";
 import { API_OPTIONS, Error404 } from "../utils/constant";
 import { addGptMovieResults } from "../utils/gptSlice";
 
@@ -10,8 +9,9 @@ const GptSearchBar = () => {
   const langKey = useSelector((store) => store.config.lang);
   const searchText = useRef(null);
 
+
   const searchMovieTMDB = async (movie) => {
-    let hui = searchText.current.value;
+    let hui  = searchText.current.value;
     const data = await fetch(
       `https://api.themoviedb.org/3/search/movie?query=${hui}&include_adult=false&language=en-US&page=1`,
       API_OPTIONS
@@ -22,8 +22,9 @@ const GptSearchBar = () => {
     dispatch(addGptMovieResults({ movieName: push, movieResults: raw }));
   };
 
+  
   return (
-    <div className="absolute top-[15%] left-[50%] -translate-x-[50%] -translate-y-[50%]  w-[30vw]">
+    <div className="absolute top-[16%] left-[50%] -translate-x-[50%] -translate-y-[50%]  w-[30vw]">
       <form
         className="mt-8 mx-auto flex items-center gap-x-4 "
         onSubmit={(e) => e.preventDefault()}

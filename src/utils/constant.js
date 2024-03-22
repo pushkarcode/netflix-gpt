@@ -6,7 +6,7 @@ export const API_OPTIONS = {
   headers: {
     accept: "application/json",
     Authorization:
-      "Bearer " + process.env.TMDB_KEY,
+      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxMzZhYWU0NzczYjkzMDk5OTlmZWNiOTdmZDQ3MGY0NSIsInN1YiI6IjY1ZDViYjc0ZGIxNTRmMDE2NGEwNmJjYiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.5PQ1OGnp0-X2m5_JETzrFLNq2MWeJF8_JOE22EUyIiA ",
   },
 };
 
@@ -17,8 +17,3 @@ export const SUPPORTED_LANGUAGES = [
   { identifier: "hindi", name: "Hindi" },
   { identifier: "french", name: "French" },
 ];
-
-export const OPENAI_KEY = "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"
-
-
-export const Error404 = "https://cdnl.iconscout.com/lottie/premium/thumb/404-error-page-3959253-3299952.gif"

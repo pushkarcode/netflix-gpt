@@ -13,7 +13,7 @@ const useMovieTrailer = (movieId) => {
         API_OPTIONS
       );
       const raw = await data.json();
-    //   console.log(raw);
+      console.log(raw);
   
       const filterdata = raw.results.filter(
         (val) => val.name === "Official Trailer"

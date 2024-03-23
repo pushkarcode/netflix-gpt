@@ -36,6 +36,7 @@
 - (*) Multi language support
 - Crearting Searching movie system
 - Adding lading gif
+- Memoization support for less api callls
 - 
 
 # Features

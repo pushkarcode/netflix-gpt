@@ -39,6 +39,7 @@
 - Memoization support for less api callls
 - Adding .env file
 - Responsivness Added
+- End of Project 🔥
 
 # Features
 

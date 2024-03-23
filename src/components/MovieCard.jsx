@@ -4,16 +4,16 @@ import noimage from "../assets/noimage.png";
 
 const MovieCard = ({ posterPath }) => {
   return (
-    <div className="w-48 p-3">
+    <div className="lg:w-48 w-[30vw] p-3">
       {posterPath ? (
         <img
-          className="w-full h-[18vw]  object-cover rounded-sm"
+          className="w-full lg:h-[18vw]  object-cover rounded-sm"
           src={IMG_CDN_URL + posterPath}
           alt="Movie Car"
         />
       ) : (
         <img
-          className="w-full h-[18vw] object-cover rounded-sm"
+          className="w-full lg:h-[18vw] object-cover rounded-sm"
           src={noimage}
           alt="Movie Car"
         />

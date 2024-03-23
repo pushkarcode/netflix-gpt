@@ -24,20 +24,20 @@ const GptSearchBar = () => {
 
   
   return (
-    <div className="absolute top-[16%] left-[50%] -translate-x-[50%] -translate-y-[50%]  w-[30vw]">
+    <div className="absolute lg:top-[16%] top-[12%] left-[50%] -translate-x-[50%] -translate-y-[50%]  lg:w-[30vw]">
       <form
-        className="mt-8 mx-auto flex items-center gap-x-4 "
+        className="lg:mt-8 mt-[30vw] mx-auto flex items-center gap-x-4 "
         onSubmit={(e) => e.preventDefault()}
       >
         <input
           ref={searchText}
-          className="px-4 w-[20vw] py-3 outline-none rounded-md text-zinc-500 font-sans"
+          className="px-4 lg:w-[20vw] w-[70vw] lg:py-3 py-5 outline-none rounded-md text-zinc-500 font-sans"
           type="text"
           placeholder={lang[langKey].gptSearchPlaceHolder}
         />
         <button
           onClick={searchMovieTMDB}
-          className="px-3 py-3 rounded-md bg-fuchsia-400 text-md font-bold text-zinc-800"
+          className="px-3 lg:py-[.7vw] py-4 rounded-md bg-fuchsia-400 lg:text-md text-xl font-bold text-zinc-800"
         >
           {lang[langKey].search}
         </button>

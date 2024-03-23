@@ -98,9 +98,9 @@ const Login = () => {
 
       <form
         onSubmit={(e) => e.preventDefault()}
-        className="absolute my-36 w-[23vw] h-[60vh] p-7  bg-neutral-900 bg-opacity-90 rounded-lg mx-auto right-0 left-0"
+        className="absolute my-36 lg:w-[23vw] w-[80vw] lg:h-[60vh] h-[50vh] p-7  bg-neutral-900 bg-opacity-90 rounded-lg mx-auto right-0 left-0"
       >
-        <h1 className="text-[2vw] text-zinc-200 font-bold p-1 mb-7">
+        <h1 className="lg:text-[2vw] text-2xl text-zinc-200 font-bold p-1 mb-7">
           {isSignInForm ? "Sign In" : "Sign Up"}
         </h1>
         {!isSignInForm && (
@@ -127,7 +127,7 @@ const Login = () => {
           {errorMessage}
         </p>
         <button
-          className="py-2 mt-2 ml-6 w-[15.5vw] font-semibold text-[1.2vw] text-zinc-200 bg-red-600 rounded-md"
+          className="lg:py-2 py-3 px-7 mt-2 ml-6 lg:w-[15.5vw] font-semibold lg:text-[1.2vw] text-zinc-200 bg-red-600 rounded-md"
           onClick={handlebuttonClick}
         >
           {isSignInForm ? "Sign In" : "Sign Up"}
@@ -137,7 +137,7 @@ const Login = () => {
         </p>
         <p
           onClick={toggleSignInfrom}
-          className="text-zinc-200 pt-5 -ml-2 font-semibold text-[1.1vw] cursor-pointer"
+          className="text-zinc-200 pt-5 -ml-2 font-semibold lg:text-[1.1vw] cursor-pointer"
         >
           {isSignInForm
             ? "New to Netfilx? Sign Up Now."

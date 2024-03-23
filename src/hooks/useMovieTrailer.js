@@ -7,7 +7,7 @@ const useMovieTrailer = (movieId) => {
   const dispatch = useDispatch();
   
   // ? use memoization for performance less api calls
-  const trailerVideo = useSelector((store) => store.movies.trailerVideo);
+  // const trailerVideo = useSelector((store) => store.movies.trailerVideo);
 
   // ! fetch trailer video and update the state
   const getmovietrailer = async () => {
@@ -26,7 +26,7 @@ const useMovieTrailer = (movieId) => {
     dispatch(addTrailerVideo(trailer.key));
   };
   useEffect(() => {
-    !trailerVideo && getmovietrailer();
+     getmovietrailer();
   }, []);
 };
 

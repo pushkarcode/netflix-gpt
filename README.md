@@ -37,7 +37,8 @@
 - Crearting Searching movie system
 - Adding lading gif
 - Memoization support for less api callls
-- 
+- Adding .env file
+- Responsivness Added
 
 # Features
 

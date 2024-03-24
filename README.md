@@ -1,6 +1,6 @@
 # Netflix GPT
 
-- Create React Ap
+- Create React App
 - Configure TailwindCss
 - Header
 - Routing of App
